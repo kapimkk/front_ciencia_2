@@ -4,7 +4,6 @@
   "editor.lineHeight": 1.8,
   "javascript.suggest.autoImports": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-
   "extensions.ignoreRecommendations": true,
   "typescript.tsserver.log": "off",
   "editor.stickyScroll.enabled": false,
@@ -12,7 +11,7 @@
   "files.associations": {
     ".env.*": "dotenv",
     ".prettierrc": "json",
-    "*.css": "postcss",
+    "*.css": "css",
     ".dev.vars": "dotenv",
     "*.ndjson": "jsonl"
   },
@@ -31,7 +30,11 @@
     "*.ndjson": "brackets-orange"
   },
   "tailwindCSS.experimental.classRegex": [
-    ["tv\\(([^)]*)\\)", "cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+    [
+      "tv\\(([^)]*)\\)",
+      "cva\\(([^)]*)\\)",
+      "[\"'`]([^\"'`]*).*?[\"'`]"
+    ],
     "class:\\s*?[\"'`]([^\"'`]*).*?,",
     "tw\\('([^']*)'\\)"
   ],
