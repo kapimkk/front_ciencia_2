@@ -16,7 +16,6 @@ html {
   gap: 40px;
   justify-content: center;
   align-items: center;
-
 }
 
 .card {
@@ -29,14 +28,15 @@ html {
   width: 170px;
   border: 5px solid rgb(219, 219, 219);
   border-radius: 15px;
+  text-align: center;
   padding: 30px 30px;
 }
 
-.images {
+.image-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 150px;
+  height: 170px;
 }
 
 .card img {
@@ -44,14 +44,22 @@ html {
 }
 
 .titulo {
-  font-size: 30px;
+  font-size: 28px;
   font-weight: 700;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.paragrafo {
+.descricao {
   font-size: 14px;
   line-height: 16px;
   color: gray;
+}
+
+.preco {
+  font-size: 32px;
 }
 
 li {
@@ -73,9 +81,11 @@ li {
   background-color: rgb(0, 0, 0);
   color: rgb(0, 0, 0);
   display: flex;
+  text-decoration: none;
   justify-content: center;
   align-items: center;
-  padding: 8px 16px;
+  color: rgb(255, 255, 255);
+  padding: 8px 12px;
   border-radius: 8px;
   width: 100%;
   font-size: 24px;
@@ -85,11 +95,6 @@ li {
 
 .btn-enviar:hover {
   background-color: rgb(32, 32, 32);
-}
-
-.btn-enviar a {
-  text-decoration: none;
-  color: rgb(255, 255, 255)
 }
 
 svg:hover path {
