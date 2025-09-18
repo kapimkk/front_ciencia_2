@@ -9,7 +9,7 @@ html {
 }
 
 .cards {
-  background-image: linear-gradient(90deg, cyan, blue);
+  background-image: linear-gradient(180deg, #6A95F3, #010730);
   width: 100%;
   height: 100vh;
   display: flex;
