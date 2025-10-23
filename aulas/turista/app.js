@@ -1,4 +1,4 @@
-const lugares = ["montanha", "praia"]
+const lugares = ["montanha", "praia", "dysnei"]
 const mensagem = `
     ---Roteiro de Viagens---
     Lugares: ${lugares}
