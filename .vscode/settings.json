@@ -114,5 +114,5 @@
   "workbench.preferredLightColorTheme": "Tokyo Night",
   "liveServer.settings.donotShowInfoMsg": true,
   "editor.multiCursorLimit": 50000,
-  "liveServer.settings.port": 5501
+  "liveServer.settings.port": 5502
 }
