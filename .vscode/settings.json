@@ -109,7 +109,7 @@
     "textMateRules": []
   },
   "workbench.layoutControl.enabled": false,
-  "window.autoDetectColorScheme": true,
+  "window.autoDetectColorScheme": false,
   "workbench.preferredDarkColorTheme": "Tokyo Night",
   "workbench.preferredLightColorTheme": "Tokyo Night",
   "liveServer.settings.donotShowInfoMsg": true,
