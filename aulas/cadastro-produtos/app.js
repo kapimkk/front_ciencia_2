@@ -1,32 +1,48 @@
 const formulario = document.querySelector('#form-user')
 const btnRemover = document.querySelector('#remover')
 const containerCards = document.querySelector('#container-cards')
+const app = document.querySelector('#app')
 
-const itensProdutos = [
-  // { nome: "Prod1", descricao: "", url: "http://dsadas" },
-  // { nome: "Prod1", descricao: "", url: "http://dsadas" }
-]
+const itensProdutos = []
 
-// Função gerar template card
-function criarCard() { }
+function renderizarCard() {
+  containerCards.innerHTML = ''
 
-// Função renderizar card
-function renderizarCard() { }
+  if (itensProdutos.length > 0) {
+    app.classList.add('com-componente')
+  } else {
+    app.classList.remove('com-componente')
+  }
 
-// Evento mandar um item para a lista
-formulario.addEventListener('submit', () => {
+  itensProdutos.forEach(item => {
+    const card = document.createElement('div')
+    card.classList.add('card')
+
+    card.innerHTML = `
+            <div class="imagem-container">
+                <img src="${item.url}" alt="${item.nome}">
+            </div>
+            <h3>${item.nome}</h3>
+            <p>${item.descricao}</p>
+        `
+    containerCards.appendChild(card)
+  })
+}
+
+formulario.addEventListener('submit', (event) => {
   event.preventDefault()
-  const titulo = document.querySelector('#nome').value.trim()
-  const desc = document.querySelector('#desc').value.trim()
-  const urlImagem = document.querySelector('#img').value.trim()
-  itensProdutos.push({ titulo, desc, urlImagem })
-  console.log(itensProdutos)
 
+  const nome = document.querySelector('#nome').value.trim()
+  const descricao = document.querySelector('#desc').value.trim()
+  const url = document.querySelector('#img').value.trim()
+
+  itensProdutos.push({ nome, descricao, url })
+
+  renderizarCard()
   formulario.reset()
 })
 
-// Evento remover item da lista
 btnRemover.addEventListener('click', () => {
-  alert("Isso vai deletar um card")
+  itensProdutos.pop()
+  renderizarCard()
 })
-
